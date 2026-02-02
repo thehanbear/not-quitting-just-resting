@@ -51,4 +51,4 @@ This project is considered feature-complete for its current scope. Future iter
 * Expanding the text database
 * Accessibility improvements
 
-* 
+  
