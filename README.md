@@ -8,7 +8,8 @@ Not Quitting, Just Resting is a lightweight web app that generates short, warm m
 📸 Demo
 Screenshots and a short demo video will be added here.
 
-![not-quitting-just-resting](https://github.com/user-attachments/assets/2364fda0-3b39-4d9d-85b0-afe100875f60)
+![NqJr](https://github.com/user-attachments/assets/664a3677-a9a3-461e-8a41-00d9e5794aec)
+
 
 
 ✨ Features
