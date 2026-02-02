@@ -1,0 +1,132 @@
+.deskHeader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.deskHeader__inner{
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 18px 10px;
+}
+
+.deskHeader__brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: inherit;
+
+  transform: translateZ(0);
+  transition: transform 220ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.deskHeader__brand:hover{
+  transform: scale(1.03);
+}
+
+.deskHeader__logo{
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+
+}
+
+.deskHeader__title{
+  font-family: var(--font-poiret-one); 
+  font-size: 18px;
+  font-weight: 900;
+	color: #095181;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.deskHeader__rule{
+  height: 1px;
+  margin: 0 10px;
+  background:  #3480b0;
+}
+
+.deskHeader__right{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.deskHeader__btn{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+	background: transparent;
+	color: #3480b0;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid  #3480b0;
+  cursor: pointer;
+  transition: transform 180ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.deskHeader__btn:hover{
+  transform: scale(1.04);
+}
+
+
+.deskHeader__modal{
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+	margin-top: 8px;
+  width: min(280px, 70vw);
+  padding: 12px 12px 14px;
+	background: #f0e7da;
+	color:#095181;
+  border-radius: 16px;
+  border: 1px solid #3480b0;
+}
+
+.deskHeader__modalHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.deskHeader__modalTitle{
+  font-family: var(--font-poiret-one);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.deskHeader__close{
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  border: 1px solid #3480b0;
+	color:#095181;
+  background: transparent;
+  cursor: pointer;
+  line-height: 1;
+  font-size: 18px;
+}
+
+.deskHeader__modalBody{
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.55;
+  opacity: 0.85;
+}

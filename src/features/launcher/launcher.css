@@ -1,0 +1,73 @@
+.launcher {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: calc(22px * var(--ui));
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.launcher__top {
+  display: flex;
+  justify-content: center;
+  padding-top: calc(22px * var(--ui));
+}
+
+.launcher__grid {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: calc(7px * var(--ui));
+  place-content: center;
+  justify-items: center;
+  padding-bottom: calc(40px * var(--ui));
+}
+
+.appIcon {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+
+  display: grid;
+  justify-items: center;
+  gap: calc(10px * var(--ui));
+
+  cursor: pointer;
+  padding: 0;
+  grid-auto-rows: max-content;
+}
+
+.appIcon__bg {
+  width: calc(64px * var(--ui));
+  height: calc(64px * var(--ui));
+  border-radius: calc(18px * var(--ui));
+  background:
+    radial-gradient(18px 18px at 30% 25%, rgba(255,255,255,0.35), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.06));
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow:
+    0 18px 28px rgba(0,0,0,0.35),
+    0 1px 0 rgba(255,255,255,0.10) inset;
+
+  display: grid;
+  place-items: center;
+	margin-top: -16px;
+  grid-row: 1;
+  grid-column: 1;
+  z-index: 0;
+}
+
+.appIcon svg {
+  width: calc(30px * var(--ui));
+  height: calc(30px * var(--ui));
+  position: relative;
+  grid-row: 1;
+  grid-column: 1;
+  z-index: 1;
+  transform: translateY(0px);
+}
+
+.appIcon__label {
+  font-size: calc(14px * var(--ui));
+  font-family: var(--font-mono);
+  opacity: 0.86;
+}

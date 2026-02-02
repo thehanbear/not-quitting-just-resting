@@ -1,0 +1,108 @@
+.intro{
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: #f0e7da;
+  opacity: 1;
+
+  /* fade out the entire intro overlay (header) */
+  transition: opacity var(--out-ms, 500ms) ease;
+  background-color: 600ms ease;
+}
+
+.intro.is-reveal{
+  background: transparent;
+}
+
+.intro.is-reveal .intro__scroller{
+  opacity: 0;
+  transition: opacity 600ms ease;
+  pointer-events: none;
+}
+
+.intro.is-out{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro.is-out{
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Internal scroller (body locked) */
+.intro__scroller{
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* Blanket overlay */
+.intro__blanket{
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+
+  /* solid base prevents any see-through */
+  background:
+    url("../assets/image/blanket.png") center /cover no-repeat,
+    #efe2d2;
+
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  box-shadow: 0 -12px 40px rgba(0,0,0,0.10);
+
+  transform: translateY(100%) translateZ(0);
+  opacity: 1;
+
+  will-change: transform, opacity;
+
+  transition:
+    transform var(--rise-ms, 2400ms) cubic-bezier(0.16, 1, 0.3, 1),
+    opacity calc(var(--rise-ms, 2400ms) * 0.7) ease;
+}
+
+/* Stage 1: rise slowly to fill */
+.intro__blanket.is-on{
+  transform: translateY(0%) translateZ(0);
+  opacity: 1;
+}
+
+/* Stage 2: dock slowly as footer */
+.intro__blanket.is-docked{
+  transform: translateY(calc(100% - var(--intro-footer-h))) translateZ(0);
+  opacity: 1;
+
+  transition:
+    transform var(--dock-ms, 300ms) cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 300ms ease;
+}
+
+.blanket__text{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 6vw;
+  font-family: var(--font-poiret-one);
+  font-size: clamp(28px, 5vw, 84px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  color: #332d31;
+  text-shadow: 0 14px 40px rgba(0,0,0,0.14);
+
+  pointer-events: none;
+  user-select: none;
+
+  opacity: 1;
+  transition: opacity 420ms ease;
+}
+
+.blanket__letter{
+  display: inline-block;
+}

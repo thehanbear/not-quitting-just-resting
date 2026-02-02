@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&family=Source+Code+Pro:wght@200..900&family=Montserrat:wght@100..900&family=Limelight&family=Zen+Tokyo+Zoo&family=Poiret+One&family=Cal+Sans&display=swap");
+
+:root{
+  --font-mono: "Roboto Mono", "Source Code Pro";
+  --font-poiret-one: "Poiret One", cursive;
+  --font-cal-sans: "Cal Sans", system-ui, sans-serif;
+
+	--intro-footer-h: 100px; 
+	--blanket-radius: 2px;
+
+}
+
+html,body {
+	height: 100%;
+	background: #ffeda8;
+  margin: 0;
+	box-sizing: border-box;
+}

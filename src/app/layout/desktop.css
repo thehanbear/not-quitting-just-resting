@@ -1,0 +1,41 @@
+.desktop{
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+}
+
+/* Butter yellow background */
+.desktop__bg{
+  position: fixed;
+  inset: 0;
+  background: #ffeda8;
+  z-index: 0;
+}
+
+.desktop__blanket-footer{
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    url("../../assets/image/blanket.png") center /cover no-repeat,
+    #efe2d2;
+
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.10);
+
+  transform: translateY(calc(100% - var(--intro-footer-h))) translateZ(0);
+  opacity: 1;
+
+  pointer-events: none;
+}
+
+/* Desktop content area */
+.desktop__content{
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  padding-bottom: var(--intro-footer-h);
+}

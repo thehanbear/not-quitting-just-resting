@@ -1,0 +1,29 @@
+functionsDirectory = "/Users/sunmac/Desktop/NQJR/not-quitting-just-resting/netlify/functions"
+functionsDirectoryOrigin = "config"
+plugins = []
+headers = []
+redirects = []
+
+[build]
+publish = "/Users/sunmac/Desktop/NQJR/not-quitting-just-resting/dist"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "npm run build"
+functions = "/Users/sunmac/Desktop/NQJR/not-quitting-just-resting/netlify/functions"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]netlify deploy --prod
+
+
+[functions]

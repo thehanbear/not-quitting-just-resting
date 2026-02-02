@@ -1,0 +1,107 @@
+.paint {
+  height: 100%;
+  padding: calc(18px * var(--ui)); 
+  color: rgba(255,255,255,0.92);
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  gap: calc(10px * var(--ui));
+}
+
+.paint__top {
+  padding-top: calc(18px * var(--ui));
+  display: grid;
+  grid-template-columns: calc(32px * var(--ui)) 1fr auto;
+  align-items: center;
+  gap: calc(8px * var(--ui));
+}
+
+.paint__back {
+  width: calc(32px * var(--ui));
+  height: calc(32px * var(--ui));
+  border-radius: calc(10px * var(--ui));
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+}
+
+.paint__title {
+  text-align: center;
+	font-family: var(--font-mono, "Source Code Pro");
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: calc(14px * var(--ui));
+}
+
+.paint__ghost {
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: inherit;
+
+  border-radius: calc(12px * var(--ui));
+  padding: calc(7px * var(--ui)) calc(10px * var(--ui));
+  font-size: calc(12px * var(--ui));
+  opacity: 0.9;
+}
+
+.paint__toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(8px * var(--ui));
+}
+
+.paint__group {
+  display: flex;
+  gap: calc(6px * var(--ui));
+}
+
+.tool {
+  flex: 1;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: inherit;
+
+  border-radius: calc(14px * var(--ui));
+  padding: calc(9px * var(--ui)) calc(8px * var(--ui));
+  font-size: calc(12px * var(--ui));
+  cursor: pointer;
+}
+
+.tool--active {
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.22);
+}
+
+.paint__colors {
+  display: flex;
+  gap: calc(8px * var(--ui)); 
+  justify-content: space-between;
+}
+
+.swatch {
+  width: calc(26px * var(--ui)); 
+  height: calc(26px * var(--ui));
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  cursor: pointer;
+}
+
+.swatch--active {
+  outline: 2px solid rgba(255,255,255,0.55);
+  outline-offset: 2px;
+}
+
+.paint__canvasWrap {
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.20);
+  border-radius: calc(22px * var(--ui));
+	margin: calc(8px * var(--ui)) 0 0;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.paint__canvas {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  display: block;
+}

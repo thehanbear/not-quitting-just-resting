@@ -1,0 +1,98 @@
+@keyframes breathe {
+  0%, 100% { transform: scaleY(1) translateY(0); }
+  50% { transform: scaleY(1.02) translateY(-2px); }
+}
+
+@keyframes actMix {
+  0%   { transform: translateY(0) rotate(0deg); }
+  12%  { transform: translateY(-6px) rotate(-1deg); }
+  24%  { transform: translateY(0) rotate(1deg); }
+  32%  { transform: translateY(-4px) rotate(0deg); }
+  55%  { transform: translateY(0) rotate(0deg); }
+  70%  { transform: translateY(-6px) rotate(-1deg); }
+  82%  { transform: translateY(0) rotate(1deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes walkRoute {
+  0%   { transform: translateX(0); }
+  40%  { transform: translateX(-95vw); }
+  52%  { transform: translateX(-95vw); }
+  92%  { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+
+.bears{
+  position: fixed;
+  right: 10px;
+  bottom: calc(var(--intro-footer-h, 120px) - 10px);
+  z-index: 10;
+
+  display: flex;
+  align-items: flex-end;
+
+	width: 85w;
+  opacity: 0;
+  transform: translateX(44px);
+  transition:
+    opacity 800ms ease,
+    transform 1400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bears.is-show{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.bears__group{
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  animation: walkRoute 320s linear infinite;
+}
+
+.bears__bear{
+  display: flex;
+  align-items: flex-end;
+  transform-origin: center bottom;
+}
+
+.bears__bear--papa{ transform: scale(1.00); }
+.bears__bear--mama{ transform: scale(0.88); }
+.bears__bear--baby{ transform: scale(0.72); }
+
+.bears__img{
+  height: 150px;
+  width: auto;
+  display: block;
+  flex: 0 0 auto;
+  transform-origin: center bottom;
+
+  animation:
+    actMix var(--actDur, 10s) ease-in-out infinite,
+    breathe 8s ease-in-out infinite;
+
+  animation-delay:
+    var(--actDelay, 0s),
+    0s;
+}
+
+.bears__bear--papa .bears__img { animation-delay: calc(var(--actDelay, 0s) + 0s), 0s; }
+.bears__bear--baby .bears__img { animation-delay: calc(var(--actDelay, 0s) + 5s), 0s; }
+.bears__bear--mama .bears__img { animation-delay: calc(var(--actDelay, 0s) + 10s), 0s; }
+
+@media (max-width: 820px){
+  .bears{
+    right: 12px;
+    bottom: calc(var(--intro-footer-h, 120px) - 8px);
+  }
+  .bears__img{
+		animation:
+		actMix var(--actDur, 14s) ease-in-out infinite,
+    breathe 8s ease-in-out infinite;
+    height: 90px;
+  }
+  .bears__group{
+    animation-duration: 260s;
+  }
+}
