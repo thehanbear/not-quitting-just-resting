@@ -5,6 +5,12 @@ This project started from a very personal place: there were days when I didn�
 Not Quitting, Just Resting is a lightweight web app that generates short, warm messages based on the user’s current mood and craving. It’s not about productivity or fixing yourself — it’s about allowing rest. This project is a work in progress and focuses on responsive design.
 
 
+📸 Demo
+Screenshots and a short demo video will be added here.
+
+![not-quitting-just-resting](https://github.com/user-attachments/assets/2364fda0-3b39-4d9d-85b0-afe100875f60)
+
+
 ✨ Features
 * Mood selection via emoji carousel
 * Craving selection (food-based comfort cues)
@@ -42,11 +48,6 @@ The architecture is intentionally future-proof:
 * The mock generator can be swapped with a real AI provider
 * No frontend refactor needed
 * Clean separation between UI, logic, and content
-
-📸 Demo
-Screenshots and a short demo video will be added here.
-
-![not-quitting-just-resting](https://github.com/user-attachments/assets/2364fda0-3b39-4d9d-85b0-afe100875f60)
 
 
 
