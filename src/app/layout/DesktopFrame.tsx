@@ -13,7 +13,8 @@ export function DesktopFrame({
     <div className="desktop">
 			<DesktopHeader />
       <div className="desktop__bg" />
-      <div className="desktop__blanket-footer" aria-hidden="true" />
+			<p className="copyright">@ All Rights Reserved | Hangaram LS</p>
+      	<div className="desktop__blanket-footer" aria-hidden="true" />
       <main className="desktop__content">{children}</main>
       {overlay}
     </div>

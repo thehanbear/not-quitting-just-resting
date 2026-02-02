@@ -22,10 +22,8 @@
     #efe2d2;
 
   box-shadow: 0 -2px 5px rgba(0,0,0,0.10);
-
   transform: translateY(calc(100% - var(--intro-footer-h))) translateZ(0);
   opacity: 1;
-
   pointer-events: none;
 }
 
@@ -39,3 +37,17 @@
   background: transparent;
   padding-bottom: var(--intro-footer-h);
 }
+
+.copyright{
+  position: fixed;
+  left: 50%;
+  bottom: 0px;       
+  transform: translateX(-50%);
+  z-index: 3;   
+  font-family: var(--font-mono);
+  font-weight: 400;
+  color:#332d31;
+  font-size: 12px;
+  pointer-events: none; 
+}
+
