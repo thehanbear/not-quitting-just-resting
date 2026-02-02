@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+🌿 Not Quitting, Just Resting
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+is a lightweight web app that generates short, warm messages based on the user’s current mood and craving. It’s not about productivity or fixing yourself — it’s about allowing rest.
 
-Currently, two official plugins are available:
+📸 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![not-quitting-just-resting](https://github.com/user-attachments/assets/2a24b6f7-785e-46f6-a12a-316d60031bb6)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✨ Features
+* Mood selection via emoji carousel
+* Craving selection (food-based comfort cues)
+* Generates warm or humorous short poems/messages
+* Two styles: short message or poem
+* Fully client-facing, with a mock backend for stability
+* Graceful fallback messages when generation fails
 
-## Expanding the ESLint configuration
+🛠 Tech Stack
+Frontend
+* React
+* TypeScript
+* Vite
+* CSS (custom UI, glass-style components)
+* GSAP (micro-interactions)
+Backend (Mock API)
+* Netlify Functions
+* TypeScript-based mock generator
+* Modular text database (openers / middles / closers)
+* Designed to be easily replaceable with a real AI API later
+Deployment
+* Netlify
+* Environment-based configuration
+* Local development with netlify dev
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🧠 Design Notes
+* Focused on emotional safety rather than “motivation”
+* Emojis are used as emotional anchors, not decoration
+* UI prioritizes calm pacing, soft motion, and readability
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🚧 Why a Mock Backend?
+During development, external AI APIs introduced rate limits and instability. To keep the experience reliable and fully free, I built a mock backend with a structured message database.
+The architecture is intentionally future-proof:
+* The mock generator can be swapped with a real AI provider
+* No frontend refactor needed
+* Clean separation between UI, logic, and content
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📌 Status
+This project is considered feature-complete for its current scope. Future iterations may explore:
+* Replacing the mock generator with a live AI API
+* Expanding the text database
+* Accessibility improvements
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* 
