@@ -22,7 +22,6 @@
   align-items: center;
   white-space: nowrap;
 	font-family: var(--font-poiret-one);
-	/* font-family:  var(--font-cal-sans); */
   font-size: clamp(20px, 65vw, 120px);
 	font-weight: 900;
 	letter-spacing: 0.8;

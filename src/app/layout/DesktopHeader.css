@@ -91,6 +91,7 @@
   padding: 12px 12px 14px;
 	background: #f0e7da;
 	color:#095181;
+	font-family: var(--font-mono);
   border-radius: 16px;
   border: 1px solid #3480b0;
 }
@@ -104,11 +105,10 @@
 }
 
 .deskHeader__modalTitle{
-  font-family: var(--font-poiret-one);
-  font-weight: 900;
+  font-family: var(--font-mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .deskHeader__close{

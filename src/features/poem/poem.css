@@ -9,7 +9,7 @@
   min-height: 0;
 }
 
-/* ===== top bar ===== */
+/*  top bar  */
 .poem__top{
   padding-top: calc(6px * var(--ui));
 
@@ -47,7 +47,7 @@
 	font-family: var(--font-mono, "Source Code Pro");
 }
 
-/* ===== pick area ===== */
+/*  pick area  */
 .poem__pickArea{
   display: grid;
   gap: calc(10px * var(--ui));
@@ -68,7 +68,7 @@
   padding-left: calc(2px * var(--ui));
 }
 
-/* ===== Carousel ===== */
+/*  Carousel  */
 .carousel{
   display: grid;
   grid-template-columns: 1fr;
@@ -101,7 +101,7 @@
   scroll-snap-stop: always;
 
   border: 1px solid rgba(255,255,255,0.14);
-  background-color: rgba(255,255,255,0.06); /* ✅ background → background-color */
+  background-color: rgba(255,255,255,0.06); 
   color: inherit;
 
   border-radius: calc(16px * var(--ui));
@@ -119,7 +119,7 @@
 }
 
 .carousel__item--active{
-  background-color: rgba(255,255,255,0.14); /* ✅ background → background-color */
+  background-color: rgba(255,255,255,0.14); 
   border-color: rgba(255,255,255,0.22);
 
   transform: translateY(-1px) scale(1.02);
@@ -134,7 +134,7 @@
   display: none;
 }
 
-/* ===== Actions ===== */
+/*  Actions  */
 .poem__actions{
   display: grid;
 }
@@ -157,7 +157,7 @@
   cursor: not-allowed;
 }
 
-/* ===== Result memo card ===== */
+/*  Result memo card*/
 .poem__result{
   border: 1px solid rgba(255,255,255,0.14);
   background: rgba(0,0,0,0.18);

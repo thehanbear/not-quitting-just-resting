@@ -1,4 +1,4 @@
-/* ===== overlay ===== */
+/*  overlay  */
 .overlay {
   position: fixed;
   inset: 0;
@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-/* ===== phone wrapper ===== */
+/*  phone wrapper  */
 .phone {
   width: min(240px, 60vw);
   pointer-events: auto;
@@ -27,7 +27,7 @@
   cursor: grabbing;
 }
 
-/* ===== phone frame ===== */
+/*  phone frame  */
 .phone__frame {
   position: relative;
   border-radius: 30px;
@@ -40,7 +40,7 @@
   margin-bottom: 150px;
 }
 
-/* ===== phone screen ===== */
+/*  phone screen  */
 .phone__screen {
   height: 400px;
   border-radius: 22px;
@@ -60,7 +60,7 @@
   --ui:0.85;
 }
 
-/* ===== notch ===== */
+/*  notch  */
 .phone__notch {
   position: absolute;
   top: 18px;
@@ -74,7 +74,7 @@
   pointer-events: none;
 }
 
-/* ===== home bar ===== */
+/*  home bar  */
 .phone__homebar {
   position: absolute;
   bottom: 14px;

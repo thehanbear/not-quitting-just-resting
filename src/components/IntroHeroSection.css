@@ -109,10 +109,8 @@
 }
 
 
+/* RESPONSIVE */
 
-/* ---------------------------
-   RESPONSIVE
----------------------------- */
 @media (max-width: 900px){
   .intro__header-inner{
     grid-template-columns: 1fr;

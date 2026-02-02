@@ -78,11 +78,9 @@ export default function LoaderOverlay({ onDone, onIntroStart, images }: Props) {
         "<"
       );
 
-      /* 3) 텍스트 살짝 벌어지기 */
       if (headingStart) tl.to(headingStart, { x: "0em", duration: 1.05 }, "<");
       if (headingEnd) tl.to(headingEnd, { x: "0em", duration: 1.05 }, "<");
 
-      /* 4) 이미지 3장 순차 제거 */
       if (extraImages.length) {
         tl.to(
           extraImages,

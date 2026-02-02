@@ -40,7 +40,7 @@ export default function DesktopHeader({ title = "Not quitting, Just resting." }:
           {open && (
             <div className="deskHeader__modal" role="dialog" aria-label="message">
               <div className="deskHeader__modalHeader">
-                <span className="deskHeader__modalTitle">Hi</span>
+                <span className="deskHeader__modalTitle">Hello</span>
                 <button
                   type="button"
                   className="deskHeader__close"
